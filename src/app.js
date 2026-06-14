@@ -38,7 +38,10 @@ app.options('*', cors());
 
 // Health Check
 app.get('/health', (req, res) => {
-  res.status(200).json({ status: 'UP', timestamp: new Date().toISOString() });
+  res.status(200).json({
+    status: 'UP',
+    timestamp: new Date().toISOString()
+  });
 });
 
 // 2) ROUTES
